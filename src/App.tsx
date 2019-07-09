@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Container from '@material-ui/core/Container';
+import {CssBaseline} from "@material-ui/core";
+import {TravelDashboard} from "./travels/Travel-dashboard";
+import {Header} from "./core/header/Header";
+import 'typeface-roboto';
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <div>
+            <CssBaseline/>
+            <Header/>
+            <Container>
+                <TravelDashboard/>
+            </Container>
+        </div>
+    );
+};
 
 export default App;
